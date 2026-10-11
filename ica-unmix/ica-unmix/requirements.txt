@@ -1,0 +1,4 @@
+numpy>=1.24
+scipy>=1.10        # only WAV I/O + Hungarian matching in evaluation (NOT used for ICA)
+matplotlib>=3.7
+pytest>=7.0

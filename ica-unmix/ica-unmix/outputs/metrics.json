@@ -1,0 +1,61 @@
+{
+  "config": {
+    "sources": [
+      "data/sources/ambient_like.wav",
+      "data/sources/music_like.wav",
+      "data/sources/speech_like.wav"
+    ],
+    "mics": null,
+    "snr": 30.0,
+    "fun": "logcosh",
+    "algorithm": "parallel",
+    "seed": 0,
+    "max_seconds": null,
+    "out": "outputs",
+    "sample_rate": 16000,
+    "cond_A": 3.783525283359871
+  },
+  "ica": {
+    "perm": [
+      0,
+      1,
+      2
+    ],
+    "corr": [
+      0.9984468466398987,
+      0.9987739516666044,
+      0.9978971671267347
+    ],
+    "sdr_db": [
+      25.051507858872416,
+      26.084794576132964,
+      23.76622110140786
+    ],
+    "mean_corr": 0.9983726551444126,
+    "mean_sdr_db": 24.96750784547108
+  },
+  "pca": {
+    "perm": [
+      0,
+      1,
+      2
+    ],
+    "corr": [
+      0.6594210352651126,
+      0.800712452560071,
+      0.7567749751567906
+    ],
+    "sdr_db": [
+      2.4781851568209627,
+      4.450655720920031,
+      3.6927560717774464
+    ],
+    "mean_corr": 0.7389694876606581,
+    "mean_sdr_db": 3.540532316506147
+  },
+  "sources": [
+    "ambient_like",
+    "music_like",
+    "speech_like"
+  ]
+}
