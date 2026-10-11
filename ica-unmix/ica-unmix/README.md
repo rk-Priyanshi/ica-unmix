@@ -48,13 +48,3 @@ Audio sources used: see [SOURCES.md](SOURCES.md).
 | FastICA | 0.998 | 25.0 |
 
 See `outputs/plots/` (waveforms, correlation matrices, SNR sweep) and `outputs/metrics.json`. Re-run with your real sources and update this table.
-
-## Concepts to be ready to explain
-1. **ICA vs PCA** — PCA: orthogonal directions of max variance (2nd-order, only *uncorrelated*). Any rotation of whitened data is still uncorrelated, so PCA can't pick the right one. ICA uses higher-order statistics to find *independent* components.
-2. **Whitening** — removes correlations and normalises variance; reduces the search to rotations, and PCA truncation can also denoise / reduce dimension.
-3. **Non-Gaussianity & CLT** — a sum of independent variables is closer to Gaussian than the variables themselves, so the direction that is *most non-Gaussian* (max |kurtosis| or negentropy) corresponds to a single source. This is also why at most one Gaussian source is allowed.
-4. **Experiments** — SNR sweep (noise robustness), PCA-vs-ICA, random mixing matrices (averaged), contrast comparison; chosen to test each assumption.
-
-## Bonus / stretch ideas
-* Mix with real multi-device recordings; add `n_mics > n_sources`.
-* Mini-Shazam: spectrogram peak hashing against a 5–10 song library, run before vs. after ICA.
